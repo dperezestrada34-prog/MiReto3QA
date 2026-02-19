@@ -22,7 +22,10 @@ jobs:
       - name: Instalar Navegadores de Playwright
         run: npx playwright install --with-deps
 
-      - name: Ejecutar Pruebas
+      - name: Ejecutar Pruebas Cucumber BDD
+        run: npm test
+
+      - name: Ejecutar Pruebas Playwright API
         run: npx playwright test
 
       - name: Subir Reporte de Resultados

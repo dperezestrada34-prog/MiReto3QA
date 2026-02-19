@@ -27,6 +27,7 @@ jobs:
 
       - name: Subir Reporte de Resultados
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: reporte-playwright
           path: playwright-report/

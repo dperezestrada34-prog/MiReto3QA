@@ -1,43 +1,23 @@
-<<<<<<< HEAD
-# Reto 3 - Automatización con Screenplay y Playwright
+# 🎭 Reto 3: Automatización con Playwright, Cucumber y Screenplay
 
-Este proyecto cumple con los requisitos del Reto 3, utilizando una arquitectura de **Screenplay** y pruebas de **API**.
+Este proyecto contiene la automatización de pruebas para la API de **DummyJSON** y el flujo de compra de la tienda **Demoblaze**, aplicando el patrón de diseño **Screenplay**.
 
-## Herramientas utilizadas
-* **Lenguaje:** TypeScript
-* **Framework:** Playwright
-* **BDD:** Cucumber (Gherkin)
-* **CI/CD:** GitHub Actions
+## Tecnologías Utilizadas
+* **Playwright**: Framework base de automatización.
+* **Cucumber (Gherkin)**: Para la definición de escenarios de prueba en lenguaje natural.
+* **TypeScript**: Lenguaje de programación.
+* **Screenplay Pattern**: Para una arquitectura escalable y mantenible.
 
-## Escenarios Cubiertos
-1. **E2E (Camino Feliz):** Flujo completo de compra en la tienda.
-2. **Negativo:** Intento de login fallido con validación de mensaje de error.
-3. **Libre Decisión:** Flujo de cierre de sesión (Logout).
-4. **API:** Pruebas de contrato y flujo (Login + Token + Get User) para 3 usuarios distintos.
+## Estructura del Proyecto (Screenplay)
+La lógica de negocio se encuentra organizada en la carpeta `src/`:
+* **Actors**: Define quién realiza las acciones.
+* **Tasks**: Acciones de alto nivel (Login, Agregar al carrito).
+* **UI**: Localizadores (Selectors) de las páginas.
+* **Questions**: Validaciones y aserciones.
 
-## Cómo ejecutar localmente
-1. Clonar el repositorio.
-2. Ejecutar `npm install`.
-3. Ejecutar `npx playwright test`.
-=======
-# Reto 3 - Automatización con Screenplay y Playwright
+## Ejecución de Pruebas
 
-Este proyecto cumple con los requisitos del Reto 3, utilizando una arquitectura de **Screenplay** y pruebas de **API**.
-
-## Herramientas utilizadas
-* **Lenguaje:** TypeScript
-* **Framework:** Playwright
-* **BDD:** Cucumber (Gherkin)
-* **CI/CD:** GitHub Actions
-
-## Escenarios Cubiertos
-1. **E2E (Camino Feliz):** Flujo completo de compra en la tienda.
-2. **Negativo:** Intento de login fallido con validación de mensaje de error.
-3. **Libre Decisión:** Flujo de cierre de sesión (Logout).
-4. **API:** Pruebas de contrato y flujo (Login + Token + Get User) para 3 usuarios distintos.
-
-## Cómo ejecutar localmente
-1. Clonar el repositorio.
-2. Ejecutar `npm install`.
-3. Ejecutar `npx playwright test`.
->>>>>>> 1394e4b6dc3aa945a1faa34cbeaa892ca454f3bc
+### 1. Pruebas E2E (Tienda con Cucumber)
+Para ejecutar los escenarios de BDD:
+```bash
+npm test

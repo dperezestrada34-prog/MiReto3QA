@@ -1,4 +1,4 @@
-# 🎭 Reto 3: Automatización con Playwright, Cucumber y Screenplay
+# Reto 3: Automatización con Playwright, Cucumber y Screenplay
 
 Este proyecto contiene la automatización de pruebas para la API de **DummyJSON** y el flujo de compra de la tienda **Demoblaze**, aplicando el patrón de diseño **Screenplay**.
 

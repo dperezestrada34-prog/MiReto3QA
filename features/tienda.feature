@@ -1,4 +1,4 @@
-﻿Feature: Flujos de la Tienda Online
+Feature: Flujos de la Tienda Online
 
   @camino_feliz
   Scenario: Realizar la compra de un producto

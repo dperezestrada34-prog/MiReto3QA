@@ -1,0 +1,32 @@
+name: Ejecucion de Pruebas Reto 3
+on:
+  push:
+    branches: [ main, master ] # Se activa al subir cambios
+  workflow_dispatch: # Permite que lo corras manualmente tú
+
+jobs:
+  automation-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Instalar Navegadores de Playwright
+        run: npx playwright install --with-deps
+
+      - name: Ejecutar Pruebas
+        run: npx playwright test
+
+      - name: Subir Reporte de Resultados
+        if: always()
+        with:
+          name: reporte-playwright
+          path: playwright-report/
